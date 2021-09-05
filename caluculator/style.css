@@ -1,0 +1,121 @@
+html{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	min-height: 100vh;
+	background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,255,1) 19%, rgba(0,212,255,1) 100%);
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.calContainer {
+  background: white;
+  width: 400px;
+  min-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.numberScreen{
+  background: black;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0;
+  width: 38.6vw;
+  
+}
+
+.numberScreen h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.btnContainer{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 3px 10px 50px grey;
+    width: 400px;
+    min-width: 400px;
+}
+
+button{
+	cursor: pointer;
+	min-height: 50px;
+	font-size: 20px;
+	font-weight: 100;
+	border: none;
+	background: rgb(200, 200, 200);
+    border-radius: 5px;
+}
+
+button:hover{
+	filter: brightness(110%);
+}
+
+button:active{
+	transform: translateY(1px);
+}
+
+button:focus{
+	outline: none;
+}
+
+.operator{
+	background: grey;
+	color: white;
+	font-size: 30px;
+}
+
+.clear{
+	color: white;
+	background: red;
+}
+
+.clear:hover{
+	filter: brightness(90%);
+}
+
+.equal-sign{
+	grid-row: 2 / span 4;
+	grid-column: 4;
+	background: #3CB371;
+}
+
+@media only screen and (max-width: 400px) {
+    body{
+    	background: white;
+    }
+}
